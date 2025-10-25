@@ -17,15 +17,3 @@ C0deForce-Journey/
 │   └── global/        # Global Round solutions
 └── practice/          # Practice problems and other solutions
 ```
-
-## 🏃‍♂️ Contest Participations
-
-### Division 2
-- Round 1061
-
-### Division 3
-- Round 1059
-  - Problem A: Beautiful Average
-  - Problem B: Beautiful String
-
-<hr>
