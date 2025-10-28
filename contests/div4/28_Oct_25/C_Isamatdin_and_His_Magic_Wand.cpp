@@ -12,7 +12,8 @@ using namespace std;
 // --- Solve function ---
 void solve()
 {
-    int n; // no of groups
+
+    int n;
     cin >> n;
 
     vector<int> a(n);
@@ -21,22 +22,46 @@ void solve()
         cin >> a[i];
     }
 
-    int count1 = 0 , count2 = 0 , count3 = 0 , count4 = 0;
-    for ( auto &it : a){
-        if( it == 1) count1++;
-        else if ( it == 2) count2++;
-        else if ( it == 3) count3++;
-        else count4++;
+    int count_1 = 0;
+    int count_2 = 0;
+
+    vector<int> ans;
+
+    for (int i = 0; i < n; i++)
+    {
+        if (a[i] % 2 == 0)
+        {
+            count_1++;
+        }
+
+        else
+        {
+            count_2++;
+        }
     }
 
-    int taxi = count4;
+    if (count_1 == n || count_2 == n)
+    {
+        for (auto &it : a)
+        {
+            cout << it << " ";
+        }
 
-    taxi+= count3;
-    count1 = max(0,count1 - count3);
+        cout<<endl;
+    }
 
-    taxi += count2/2;
+    else
+    {
 
+        sort(a.begin(), a.end());
+        for (auto &it : a)
+        {
 
+            cout << it << " ";
+        }
+
+        cout<<endl;
+    }
 }
 
 int main()
